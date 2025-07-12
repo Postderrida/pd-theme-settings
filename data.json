@@ -1,0 +1,176 @@
+{
+  "customSnippets": [
+    {
+      "id": "custom-1752293248546",
+      "name": "Свойства",
+      "group": "Общие",
+      "content": ".markdown-preview-view.show-properties .metadata-container {\n    display: block !important;\n}",
+      "isCustom": true,
+      "setting": "custom_1752293248546",
+      "desc": "Показываем свойства"
+    },
+    {
+      "id": "snippet-1752297000001",
+      "name": "Оформление закрепленных вкладок",
+      "group": "Общие",
+      "content": ".workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned) {\n  min-width: 36px !important;\n  max-width: 36px !important;\n  width: 36px !important;\n  padding: 0 !important;\n  justify-content: center !important;\n  border-radius: 8px 8px 0 0 !important;\n}\n.workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned) .workspace-tab-header-inner-title {\n  display: none !important;\n}\n.workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned) .workspace-tab-header-status-icon.mod-pinned {\n  display: none !important;\n}\n.workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned) .workspace-tab-header-inner-close-button {\n  display: none !important;\n}\n.workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned) .workspace-tab-header-inner-icon {\n  display: flex !important;\n  align-items: center;\n  justify-content: center;\n}\n.workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned):not(.is-active) .workspace-tab-header-inner-icon svg {\n  filter: grayscale(1) brightness(0.2) !important;\n  color: inherit !important;\n  stroke: currentColor !important;\n  opacity: 1 !important;\n}\n.workspace-tab-header:has(.workspace-tab-header-status-icon.mod-pinned).is-active .workspace-tab-header-inner-icon svg {\n  filter: none !important;\n  color: var(--tab-text-color-focused-active, var(--interactive-accent, #7f6df2)) !important;\n  stroke: var(--tab-text-color-focused-active, var(--interactive-accent, #7f6df2)) !important;\n  opacity: 1 !important;\n}\n",
+      "isCustom": true,
+      "setting": "snippet_1752297000001",
+      "desc": "Включить/выключить оформление закрепленных вкладок как иконок (требуется Obsidian 1.4+)."
+    },
+    {
+      "id": "snippet-1752297000002",
+      "name": "Оформление календаря (Calendar plugin)",
+      "group": "Общие",
+      "content": "/*\n    Calendar plugin tweaks\n    https://github.com/replete/obsidian-minimal-theme-css-snippets\n*/\n\n.view-content:has(#calendar-container) {\n    padding:0;\n}\n\n#calendar-container {\n    padding:0 8px 8px 8px;\n}\n\n#calendar-container .year {\n    color:var(--text-muted);\n}\n#calendar-container td,\n#calendar-container .day {\n    border-radius:0 !important;\n}\n#calendar-container .day {\n    padding-top:0;\n    padding-bottom:0;\n}\n#calendar-container .day.active {\n    outline:1px solid var(--tx3);\n}\n#calendar-container .day.active .filled,\n#calendar-container .day.today.active .filled {\n    fill:var(--tx1, var(--text-normal)) !important;\n}\n#calendar-container .day.active .hollow,\n#calendar-container .day.today.active .hollow {\n    stroke:var(--tx1, var(--text-normal)) !important;\n}\n#calendar-container .day.today .filled {\n    fill:var(--text-muted) !important;\n}\n#calendar-container .day.today .hollow {\n    stroke:var(--text-muted) !important;\n}\n\n#calendar-container .day.today {\n    color:var(--text-bold);\n    font-weight:700;\n    outline:2px solid var(--color-background-day-active);\n}\n.theme-dark #calendar-container .day.today {\n    /* outline:2px solid var(--tx3); */\n}\n\n#calendar-container .day.today.active {\n    /* color:var(--text-bright); */\n}\n#calendar-container .day:active {\n    background:var(--tx2, var(--text-muted));\n}\n#calendar-container .day.adjacent-month {\n    /* color:var(--tx2) */\n}\n\n#calendar-container .weekend {\n    background: var(--bg2, var(--background-primary));\n}\n\n\n#calendar-container .day.today {\n    background: #afafaf;\n    padding: 5px 5px;\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000002",
+      "desc": "Включить/выключить кастомное оформление для плагина календаря."
+    },
+    {
+      "id": "snippet-1752297000003",
+      "name": "Глобальные переменные и layout",
+      "group": "Общие",
+      "content": "body {\n    --line-width: 50rem;\n    --max-width: 88%;\n    --MenuA: #333333;\n    --MenuB: #ffffff;\n    --MenuC: #dddddd;\n    --MenuD: #efefef;\n    --MenuE: #f3f3f3;\n    --MenuF: #f7df37;\n    --MenuG: #121212;\n    --MenuH: #3f3f3f;\n    --MenuI: #1e1e1e;\n    --MenuJ: #fbfbfb;\n    --MenuK: #5a5a5a;\n    --MenuL: #e6e6e6;\n    --MenuM: #c7c7c7;\n    --MenuN: #2e2d2d;\n    --MenuO: #f0f0f0;\n    --Fold0: #d32f2f;\n    --Fold1: #8ab6e2;\n    --Fold2: #ff9000;\n    --Fold3: #f1ca5d;\n    --Fold4: #fd5f5f;\n    --Fold5: #9dcd78;\n    --Fold6: #aaa5db;\n    --Fold7: #d399cf;\n    --Fold8: #cda485;\n    --Fold9: #b9c0c7;\n    --FoldA: #f0aaaa;\n    --FoldB: #f1b86f;\n    --FoldC: #7acc93;\n    --FoldD: #87c9d9;\n    --FoldE: #96abde;\n    --FoldF: #eb9fc9;\n    --p-spacing: 1.1rem;\n}\n\n.dashboard {\n  --line-width: var(--max-width);\n  --container-table-width: var(--max-width);\n  --container-img-width: var(--max-width);\n  --container-iframe-width: var(--max-width);\n  --container-map-width: var(--max-width);\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000003",
+      "desc": "Управляет шириной контента, глобальными переменными и цветовыми акцентами."
+    },
+    {
+      "id": "snippet-1752297000004",
+      "name": "Оформление заголовков",
+      "group": "Заголовки",
+      "content": "h1, .markdown-rendered h1, .cm-header-1 {\n    color: #333;\n}\nh2, .markdown-rendered h2, .cm-header-2 {\n    color: #8073b9;\n}\nh3, .markdown-rendered h3, .cm-header-3 {\n    color: #ff725b;\n}\nh4, .markdown-rendered h4, .cm-header-4 {\n    color: #ff4684;\n}\nh5, .markdown-rendered h5, .cm-header-5 {\n    color: green;\n}\nh6, .markdown-rendered h6, .cm-header-6 {\n    color: 333;\n}\nh2 a, .markdown-rendered h2 a {\n    color: #8073b9 !important;\n}\n\nh1 {\n    border-bottom: 2px solid var(--background-modifier-border);\n}\nh2 {\n    border-bottom: 2px solid var(--background-modifier-border);\n    margin-bottom: 0px !important;\n}\nh3 {\n    border-bottom: 1px solid var(--background-modifier-border);\n}\nh4 {\n    border-bottom: 1px dashed var(--background-modifier-border);\n    margin-bottom: -10px !important;\n}\nh5 {\n    border-bottom: 1px dotted var(--background-modifier-border);\n    margin-bottom: -10px !important;\n}\n\n.folder-note-underline .has-folder-note .nav-folder-title-content {\n    text-decoration-line: none;\n    text-decoration-color: var(--text-faint);\n    text-decoration-thickness: 2px;\n    text-underline-offset: 1px;\n} \n",
+      "isCustom": true,
+      "setting": "snippet_1752297000004",
+      "desc": "Красивые цвета и линии для заголовков h1–h6."
+    },
+    {
+      "id": "snippet-1752297000005",
+      "name": "Разноцветные теги",
+      "group": "Теги",
+      "content": "a.tag {\n\tfont-size:0.8rem;\n\tline-height: 28px;\n}\n\na.tag:nth-child(9n+1) {\n\tbackground:  var(--Fold1);\n\tborder:   var(--Fold1);\n\tcolor:var(--MenuB);\n}\n\na.tag:nth-child(9n+2) {\n\tbackground:  var(--Fold2);\n\tborder:   var(--Fold2);\n\tcolor:var(--MenuB);\n}\n\na.tag:nth-child(9n+3) {\n\tbackground:  var(--Fold4);\n\tborder:   var(--Fold4);\n\tcolor:var(--MenuB);\n}\n\na.tag:nth-child(9n+4) {\n\tbackground:  var(--Fold5);\n\tborder:   var(--Fold5);\n\tcolor:var(--MenuB);\n}\n\na.tag:nth-child(9n+5) {\n\tbackground:  var(--Fold6);\n\tborder:   var(--Fold6);\n\tcolor:var(--MenuB);\n}\n\na.tag:nth-child(9n+6) {\n\tbackground:  var(--Fold7);\n\tborder:   var(--Fold7);\n\tcolor:var(--MenuB);\n}\n\na.tag:nth-child(9n+7) {\n\tbackground:  var(--Fold8);\n\tborder:   var(--Fold8);\n\tcolor:var(--MenuB);\n}\n\na.tag:nth-child(9n+8) {\n\tbackground:  var(--Fold9);\n\tborder:   var(--Fold9);\n\tcolor:var(--MenuB);\n}\n\na.tag:nth-child(9n+9){\n\tbackground:  var(--Fold3);\n\tborder:   var(--Fold3);\n\tcolor:var(--MenuB);\n}\n\n.tag-cloud a {\n    transition: transform 0.2s, color 0.2s;\n}\n.tag-cloud a:hover {\n    transform: scale(1.2);\n    color: var(--interactive-accent);\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000005",
+      "desc": "Делает теги разноцветными и улучшает облако тегов."
+    },
+    {
+      "id": "snippet-1752297000006",
+      "name": "Ссылки и внутренние ссылки",
+      "group": "Ссылки",
+      "content": ".metadata-container .internal-link.is-unresolved, .markdown-rendered .internal-link.is-unresolved {\n    color: hsl(0deg 71.22% 47.37%);\n    opacity: 1;\n}\n\n.metadata-container .internal-link, .markdown-rendered .internal-link, a, .external-link {\n    text-decoration:underline;\n}\n\n.metadata-container .internal-link:hover, .markdown-rendered .internal-link:hover, a:hover, .external-link:hover {\n    text-decoration:none;\n}\n\nh1 a, h2 a, h3 a {\ntext-decoration:none  !important;\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000006",
+      "desc": "Оформляет ссылки, убирает подчеркивание при наведении, выделяет неразрешённые."
+    },
+    {
+      "id": "snippet-1752297000007",
+      "name": "Проводник (навигация)",
+      "group": "Навигация",
+      "content": ".nav-file-title, .nav-folder-title {\n    color: #333;\n}\n\n.nav-folder .nav-folder-children.is-collapsed > .nav-folder-title::before {\n    content: \"\\f07b\";\n    font-family: \"Font Awesome 5 Free\";\n    font-weight: 900;\n    margin-right: 8px;\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000007",
+      "desc": "Цвета и иконки для файлов и папок в боковой панели."
+    },
+    {
+      "id": "snippet-1752297000008",
+      "name": "Свойства (metadata)",
+      "group": "Свойства",
+      "content": "[data-property-key=\"banner\"],\n[data-property-key=\"banner_x\"],\n[data-property-key=\"banner_y\"]{\n   display: none;\n}\n\n[data-property-key=\"tags\"] div.metadata-property-key {\n   display: none;\n}\n[data-property-key=\"tags\"] div.metadata-property-value div.multi-select-pill, [data-property-key=\"tags\"] div.metadata-property-value div.multi-select-pill-remove-button {\n   background:#fff;\n   color:#333;\n}\n\n[data-property-key=\"tags\"] div.metadata-property-value div.multi-select-pill:hover, [data-property-key=\"tags\"] div.metadata-property-value div.multi-select-pill-remove-button:hover {\n   color:var(--icon-color-active);\n}\n\n[data-property-key=\"tags\"] div.metadata-property-value div.multi-select-pill::before {\n  content: \"\";\n\n}\n\n[data-property-key=\"tags\"] div.metadata-property-value div.multi-select-pill, [data-property-key=\"tags\"] div.metadata-property-value div.multi-select-pill-remove-button {\nborder:0px;\n}\n\n[data-property-key=\"tags\"] div.metadata-property-value div.multi-select-pill:hover, [data-property-key=\"tags\"] div.metadata-property-value div.multi-select-pill-remove-button:hover {\ncolor:#5C85F2;\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000008",
+      "desc": "Скрывает лишние свойства, стилизует теги в свойствах."
+    },
+    {
+      "id": "snippet-1752297000009",
+      "name": "Кнопки и элементы управления",
+      "group": "Кнопки",
+      "content": "span.btn a.markdown-rendered,span.btn a.internal-link, span.btn a.external-link {\n    border-bottom: 0px;\n    padding: 5px 8px;\n    border: 1px solid var(--MenuC);\n    background: var(--MenuE);\n\tcolor:var(--MenuA);\n\tfont-weight:600;\n\tfont-size:0.9rem;\n\ttext-decoration:none;\n\tborder-radius:5px;\n\tmargin-right:5px;\n}\n\nspan.btn a.markdown-rendered:hover,span.btn a.internal-link:hover, span.btn a.external-link:hover {\n    border: 1px solid var(--MenuC);\n\tcolor: var(--internal-link-hover);\n\ttext-decoration:none;\n}\n\nspan.nb a.markdown-rendered,span.nb a.internal-link, span.nb a.external-link {\n    background: var(--MenuNO);\n    border: 0px;\n    border-radius: 0;\n}\n\nspan.nb a.markdown-rendered:hover,span.nb a.internal-link:hover, span.nb a.external-link:hover {\n    border: 0;\n}\n\n.selector {\n    display: flex;\n    justify-content: flex-start;\n    margin: 15px 0;\n    gap: 5px;\n    padding: 0;\n}\n\n.selector button {\n    background: var(--background-primary);\n    color: var(--text-normal);\n    border: 1px solid #d6d8db;\n    padding: 4px 10px;\n    font-size: 0.8rem;\n    font-family: Arial, sans-serif;\n    cursor: pointer;\n    border-radius: 5px;\n    transition: background 0.2s ease, color 0.2s ease;\n    box-shadow: none;\n}\n\n.selector button.disabled {\n    background: var(--background-primary-alt);\n    color: var(--text-normal);\n    border-color: #d6d8db;\n    cursor: not-allowed;\n}\n\n.selector button:not(.disabled):hover {\n    background: #007bff;\n    color: white;\n}\n\n.selector button:not(.disabled):active {\n    background: #0056b3;\n    color: white;\n}\n\nselect, .dropdown {\nbox-shadow:none;\nborder:1px solid #ddd;\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000009",
+      "desc": "Красивые кнопки, селекторы, выпадающие списки."
+    },
+    {
+      "id": "snippet-1752297000010",
+      "name": "Callout и блоки",
+      "group": "Блоки",
+      "content": ".callout {\n    border: 1px solid #ddd;\n}\n\n.callout h3 {\n    font-size: 1rem;\n}\n\n.block-language-img-gallery {\nmargin-top:20px;\n}\n\n.callout {\nborder:1px solid #ddd;\n}\n\n.callout h3 {\n    font-size: 1rem;\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000010",
+      "desc": "Оформление callout-блоков, специальных блоков и баннеров."
+    },
+    {
+      "id": "snippet-1752297000011",
+      "name": "Таблицы (Dataview, стандартные)",
+      "group": "Таблицы",
+      "content": "/* classiktable */\n.markdown-preview-view.classiktable .dataview.table-view-table {\n    border-collapse: collapse;\n    width: 100%;\n    border: 1px solid var(--background-modifier-border);\n    font-size: 14px;\n    line-height: 1.5;\n}\n.markdown-preview-view.classiktable .dataview.table-view-table th,\n.markdown-preview-view.classiktable .dataview.table-view-table td {\n    border: 1px solid var(--background-modifier-border);\n    padding: 8px;\n    text-align: left;\n}\n.markdown-preview-view.classiktable .dataview.table-view-table tr:nth-child(even) {\n    background-color: var(--background-modifier-alt);\n}\n.markdown-preview-view.classiktable .dataview.table-view-table th {\n    background-color: var(--background-primary-alt);\n    font-weight: bold;\n}\n.markdown-preview-view.classiktable .dataview.table-view-table td {\n    white-space: normal;\n    word-wrap: break-word;\n    max-width: 500px;\n}\n\n/* weekly */\n.markdown-preview-view.weekly .dataview.table-view-table img {\n    max-height: 180px;\n    object-fit: cover;\n    width: auto;\n    display: block;\n}\n\n/* classic-standart-table */\n.markdown-preview-view.classic-standart-table table {\n    border-collapse: collapse;\n    width: 100%;\n    border: 1px solid var(--background-modifier-border);\n    font-size: 14px;\n    line-height: 1.5;\n    margin: 0;\n}\n.markdown-preview-view.classic-standart-table table th,\n.markdown-preview-view.classic-standart-table table td {\n    border: 1px solid var(--background-modifier-border);\n    padding: 8px;\n    text-align: left;\n    background-color: transparent;\n}\n.markdown-preview-view.classic-standart-table table th {\n    background-color: var(--table-column-alt-background);\n    font-weight: bold;\n    text-align: left;\n}\n.markdown-preview-view.classic-standart-table table tr:nth-child(even) {\n    background-color: var(--background-modifier-alt);\n}\n.markdown-preview-view.classic-standart-table table td {\n    white-space: normal;\n    word-wrap: break-word;\n    max-width: 500px;\n}\n.markdown-preview-view.classic-standart-table table img {\n    max-height: 180px;\n    object-fit: cover;\n    width: auto;\n    display: block;\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000011",
+      "desc": "Красивые таблицы, зебра-эффект, стили для weekly и стандартных таблиц."
+    },
+    {
+      "id": "snippet-1752297000012",
+      "name": "Прочее",
+      "group": "Прочее",
+      "content": ".markdown-preview-sizer.markdown-preview-section .view-image-icon {\ndisplay:none !important;\n}\n\n.pixel-banner-image {\n    margin-left: -10px !important;\n}\n\n.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer {\n    padding-bottom: 40px !important;\n}\n\n.float-right {\n  float:right\n}\n\n.nospan div.node-insert-event table span  {display:none}\n.nospan div.node-insert-event table a.internal-link span  {display:block}\n.nospan a.internal-tag {text-decoration:none;}\n.nospan a.tag {\n    text-decoration: none;\n    background: var(--bg2) !important;\n    color: #333 !important;\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000012",
+      "desc": "Мелкие улучшения: скрытие иконок, стили для .nospan, .float-right и др."
+    },
+    {
+      "id": "snippet-1752297000013",
+      "name": "Темная тема (Minimal)",
+      "group": "Темная тема",
+      "content": ".theme-dark.minimal-theme {\n    --bg3: #3f3f3f;\n}\n.theme-dark.minimal-theme .nav-folder-title-content {\ncolor:#fff !important;\n}\n.theme-dark.minimal-theme .internal-link, .theme-dark.minimal-theme .markdown-rendered .internal-link {\ncolor:#fffb8c;\n}\n.theme-dark.minimal-theme .nav-file-title.is-active:hover, .theme-dark.minimal-theme .nav-folder-title.is-active:hover, .theme-dark.minimal-theme .nav-file-title.is-active, .theme-dark.minimal-theme .nav-folder-title.is-active {\ncolor:#fff;\n} \n",
+      "isCustom": false,
+      "setting": "snippet_1752297000013",
+      "desc": "Улучшения для темной темы Minimal."
+    }
+  ],
+  "snippetsOrder": [
+    "custom-1752293248546",
+    "snippet-1752297000001",
+    "snippet-1752297000002",
+    "snippet-1752297000003",
+    "snippet-1752297000004",
+    "snippet-1752297000005",
+    "snippet-1752297000006",
+    "snippet-1752297000007",
+    "snippet-1752297000008",
+    "snippet-1752297000009",
+    "snippet-1752297000010",
+    "snippet-1752297000011",
+    "snippet-1752297000012",
+    "snippet-1752297000013"
+  ],
+  "custom_1752293248546": false,
+  "custom_1752295007305": false,
+  "custom_1752295764930": false,
+  "custom_1752296036473": false,
+  "snippet_1752297000001": false,
+  "snippet_1752297000002": false,
+  "snippet_1752297000003": false,
+  "snippet_1752297000004": false,
+  "snippet_1752297000005": false,
+  "snippet_1752297000006": false,
+  "snippet_1752297000007": false,
+  "snippet_1752297000008": false,
+  "snippet_1752297000009": false,
+  "snippet_1752297000010": false,
+  "snippet_1752297000011": false,
+  "snippet_1752297000012": false,
+  "snippet_1752297000013": false,
+  "groupsOrder": [
+    "Темная тема",
+    "Общие",
+    "Заголовки",
+    "Теги",
+    "Ссылки",
+    "Навигация",
+    "Свойства",
+    "Кнопки",
+    "Блоки",
+    "Таблицы",
+    "Прочее"
+  ]
+}
